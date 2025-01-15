@@ -28,6 +28,9 @@ setup(
     license="TODO: License declaration",
     tests_require=["pytest"],
     entry_points={
-        "console_scripts": [],
+        'console_scripts': [
+            'commander_node = maze_runner.commander_node:main',
+            'test_node = maze_runner.test_node:main',
+        ],
     },
 )
