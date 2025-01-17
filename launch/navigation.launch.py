@@ -15,14 +15,14 @@ def generate_launch_description():
         get_package_share_directory("turtlebot3_gazebo"), "launch"
     )
     world_file = os.path.join(
-        get_package_share_directory("autonomous_tb3"),
+        get_package_share_directory("maze_runner"),
         "worlds",
         "maze_5x5.world",
     )
 
     pkg_gazebo_ros = get_package_share_directory("gazebo_ros")
 
-    config_dir = os.path.join(get_package_share_directory("autonomous_tb3"), "config")
+    config_dir = os.path.join(get_package_share_directory("maze_runner"), "config")
     rviz_config = os.path.join(config_dir, "tb3_nav.rviz")
     map_file = os.path.join(config_dir, "maze_5x5_map.yaml")
     params_file = os.path.join(config_dir, "tb3_nav_params.yaml")
