@@ -14,6 +14,7 @@ setup(
         (os.path.join("share", package_name, "launch"), glob("launch/*")),
         (os.path.join("share", package_name, "config"), glob("config/*")),
         (os.path.join("share", package_name, "worlds"), glob("worlds/*")),
+        (os.path.join("share", package_name, "maps"), glob("maps/*")),
         *[
             (os.path.join("share", package_name, os.path.dirname(f)), [f])
             for f in glob("models/**", recursive=True)

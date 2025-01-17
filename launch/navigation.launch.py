@@ -24,8 +24,10 @@ def generate_launch_description():
 
     config_dir = os.path.join(get_package_share_directory("maze_runner"), "config")
     rviz_config = os.path.join(config_dir, "tb3_nav.rviz")
-    map_file = os.path.join(config_dir, "maze_5x5_map.yaml")
     params_file = os.path.join(config_dir, "tb3_nav_params.yaml")
+    map_file = os.path.join(
+        get_package_share_directory("maze_runner"), "maps", "maze_5x5_map.yaml"
+    )
 
     use_sim_time = LaunchConfiguration("use_sim_time", default="true")
     x_pose = LaunchConfiguration("x_pose", default="0.0")
