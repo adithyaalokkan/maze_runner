@@ -22,10 +22,10 @@ class Commander(Node):
         initial_pose = PoseStamped()
         initial_pose.header.frame_id = "map"
         initial_pose.header.stamp = navigator.get_clock().now().to_msg()
-        initial_pose.pose.position.x = 3.5
+        initial_pose.pose.position.x = -3.5
         initial_pose.pose.position.y = 0.0
         initial_pose.pose.orientation.z = 0.0
-        q_x, q_y, q_z, q_w = tf_transformations.quaternion_from_euler(0.0, 0.0, 1.57)
+        q_x, q_y, q_z, q_w = tf_transformations.quaternion_from_euler(0.0, 0.0, -1.57)
         initial_pose.pose.orientation.x = q_x
         initial_pose.pose.orientation.y = q_y
         initial_pose.pose.orientation.z = q_z
@@ -37,9 +37,9 @@ class Commander(Node):
         goal_pose = PoseStamped()
         goal_pose.header.frame_id = "map"
         goal_pose.header.stamp = navigator.get_clock().now().to_msg()
-        goal_pose.pose.position.x = -3.5
+        goal_pose.pose.position.x = 3.5
         goal_pose.pose.position.y = 0.0
-        q_x, q_y, q_z, q_w = tf_transformations.quaternion_from_euler(0.0, 0.0, 3.14)
+        q_x, q_y, q_z, q_w = tf_transformations.quaternion_from_euler(0.0, 0.0, 0.0)
         initial_pose.pose.orientation.x = q_x
         initial_pose.pose.orientation.y = q_y
         initial_pose.pose.orientation.z = q_z
