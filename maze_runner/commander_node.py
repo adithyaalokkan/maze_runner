@@ -1,6 +1,9 @@
 #!usr/bin/env python3
 
 
+# Commander Api for Nav2. Sets initial position and passses target destination.
+
+
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import PoseStamped
@@ -19,6 +22,7 @@ class Commander(Node):
         goals = []
         navigator = BasicNavigator()
 
+        # Set initial position
         initial_pose = PoseStamped()
         initial_pose.header.frame_id = "map"
         initial_pose.header.stamp = navigator.get_clock().now().to_msg()
@@ -34,6 +38,7 @@ class Commander(Node):
 
         navigator.waitUntilNav2Active()
 
+        # Pass target destination
         goal_pose = PoseStamped()
         goal_pose.header.frame_id = "map"
         goal_pose.header.stamp = navigator.get_clock().now().to_msg()

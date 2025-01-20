@@ -1,3 +1,6 @@
+# Nav2 Parameters for TurtleBot3 waffle robot
+# From https://github.com/ROBOTIS-GIT/turtlebot3/blob/humble/turtlebot3_navigation2/param/waffle.yaml
+
 amcl:
     ros__parameters:
         use_sim_time: False

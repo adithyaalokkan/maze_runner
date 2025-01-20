@@ -1,3 +1,6 @@
+# RViz configurations for Nav2 and TurtleBot3
+# From https://github.com/ROBOTIS-GIT/turtlebot3/blob/humble/turtlebot3_navigation2/rviz/tb3_navigation2.rviz
+
 Panels:
   - Class: rviz_common/Displays
     Help Height: 0
